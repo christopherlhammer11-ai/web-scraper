@@ -2,7 +2,7 @@
 
 **Structured web extraction for AI research workflows.** Web Scraper pulls readable text, links, and metadata from pages so agents can work with cleaner source material.
 
-Demo: **Related demo:** [Research Intake Layer](https://christopherhammer.dev/assets/videos/narrated/project-demos/research-intake-layer-narrated.mp4)
+**Related demo:** [Research Intake Layer](https://christopherhammer.dev/assets/videos/narrated/project-demos/research-intake-layer-narrated.mp4)
 
 ## Who Uses It
 
