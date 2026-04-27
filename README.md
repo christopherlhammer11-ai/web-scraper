@@ -1,60 +1,51 @@
 # Web Scraper
 
-CLI tool for extracting text, links, and metadata from web pages with sensible defaults.
+**Structured web extraction for AI research workflows.** Web Scraper pulls readable text, links, and metadata from pages so agents can work with cleaner source material.
 
-<!-- badges -->
+Demo: **Related demo:** [Research Intake Layer](https://christopherhammer.dev/assets/videos/narrated/project-demos/research-intake-layer-narrated.mp4)
 
-## What It Does
+## Who Uses It
 
-Web Scraper (`webscrape`) fetches pages and intelligently extracts text, internal/external links, and OpenGraph metadata. Smart defaults: 50KB text limit, 10s timeout, automatic HTML-to-text conversion.
+- AI agents that need to read public web pages
+- Researchers gathering source material
+- Competitive analysis workflows
+- RAG/preprocessing pipelines
+- Small automation jobs that need text, links, and metadata
 
-## Features
+## Core Features
 
-- **CLI Command**: `webscrape <url>` for instant extraction
-- **Text Extraction**: htmlToText() with formatting preservation
-- **Link Discovery**: extractLinks() separates internal from external
-- **Metadata Parsing**: extractMetadata() for OpenGraph tags
-- **Smart Limits**: 50KB text cap, 10s timeout by default
-- **Configurable**: Override text limit, timeout, and output format
+- Fetch a page and extract readable text
+- Separate internal and external links
+- Pull OpenGraph/metadata fields
+- JSON or text output
+- Timeout and text-length controls
+- Useful first stage for research agents
+
+## Example
+
+```bash
+webscrape https://example.com --format json
+webscrape https://example.com --links --external-only
+webscrape https://example.com --metadata
+```
 
 ## Quick Start
 
 ```bash
-npm install -g web-scraper
-webscrape https://example.com
+npm install
+npm run build
+npm test
 ```
 
-## Usage
+## Portfolio Context
 
-```bash
-# Extract all text
-webscrape https://example.com --format text
+This is one of the eyes of the agent stack. HammerLock and other research workflows need source collection before verification, condensation, summarization, and drafting.
 
-# Get links only
-webscrape https://example.com --links --external-only
+---
 
-# Extract metadata
-webscrape https://example.com --metadata
+Built by **Christopher L. Hammer** - self-taught AI/product builder shipping local-first tools, demos, and real product surfaces.
 
-# Custom limits
-webscrape https://example.com --max-text 100000 --timeout 20000
+- Portfolio: [christopherhammer.dev](https://christopherhammer.dev)
+- Proof demos: [https://christopherhammer.dev#proof](https://christopherhammer.dev#proof)
+- GitHub: [christopherlhammer11-ai](https://github.com/christopherlhammer11-ai)
 
-# JSON output
-webscrape https://example.com --format json
-```
-
-## Tech Stack
-
-- Commander.js (CLI framework)
-- Fetch API (HTTP client)
-- DOM parsing (HTML processing)
-
-## Part of Genesis Marketplace
-
-Powers the web research agent in the Genesis skill marketplace.
-
-## Author
-
-Christopher L. Hammer  
-GitHub: [christopherlhammer11-ai](https://github.com/christopherlhammer11-ai)  
-Sites: [hammercg.com](https://hammercg.com) | [hammerlockai.com](https://hammerlockai.com)
